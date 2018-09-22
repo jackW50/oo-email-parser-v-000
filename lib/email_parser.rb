@@ -9,7 +9,8 @@ class EmailParser
   end 
   
   def parse
-    @emails.split(/[\s,]+/)
+    parsed_array = @emails.split(/[\s,]+/)
+    parsed_array.collect {|x| x.strip}
   end 
   
 end 
